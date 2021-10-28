@@ -14,4 +14,19 @@ Design Ideas:
         Before this, probably just cmd line app in order to test accuracy prior to spending time on a front end. 
     Figure out how I will apply the constants needed to the functions. What the functions should even be doing and how they correlate with each other. 
 
-    
+I have not taking any class with differential equations yet, so it looks all garbled to me. The only way to solve it in the given time I need to come up with a solution. From reading the documentation on the diffeqpy tutorial I know that I could probably use it to solve this system of equations and have it plotted out.
+
+First line is the original equation whilst the second will be what I set the variables to in order to make it make sense to me.
+1. dS_m/dt = delta((S_f + I_f) - A (S_f + I_f)** 2) - - epsilon*S_m + lower_beta*S_m - lower_gamma*S_m - lower_alpha* (S_m + I_m) * S_m - mew_one*S_m
+
+
+
+2. dI_m/dt = epsilon*S_m + lower_beta*S_m + lower_alpha* (S_m + I_f) * S_m - mew_two*I_m
+
+εSM +βSM +γSM +α⋅(SM +IM )⋅SM −μ2I
+
+
+3. dS_f/dt = lower_delta((S_f + I_f) - A * (S_f + I_f)**2) - epsilon*S_f - lower_beta*S_f - lower_gamma*S_f - mew_three*S_f
+
+
+4. dI_f/dt = epsilon*S_f + lower_beta*S_f + lower_gamma*S_f - mew_four*I_f
