@@ -1,6 +1,5 @@
 # Fly-Simulator
-This app will simulate a model of flies with various variables that will influence the amount of flies alive and dead.
-
+This app will simulate a model of flies with various variables.
 First there will need to be a fly object:
     Class Fly:
         age, hunger, health points
