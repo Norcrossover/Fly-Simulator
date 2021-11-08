@@ -4,15 +4,12 @@ This app will simulate a model of flies with various variables that will influen
 The equation used in this simulation is derived from: https://mathbench.umd.edu/modules/popn-dynamics_housefly/page11.htm
 The equation simplifies to: flies_t = (rate_of_mortality)*flies_t-1
 The main factors I could start off is with creating a rate of mortality through conditions such as :
-how fit the flies were (food, worked out)
-number of flies reproduced per fly (seasonal amount)
+    How fit the flies were (food, worked out)
+    Number of flies reproduced per fly (seasonal amount)
+    Number of eggs per fly (too many flies fighting over rotting food might lower egg production in the food)
+    Carrying Capacity - Number of flies vs. Number of Resources
 
-
-
-May delete this:
-First there will need to be a fly object:
-    Class Fly:
-        age, hunger, health points
+N_t = N_t-1 + (r * (K-N_t-1) * (N_t-1)/K)
         
 In addition to various functions/methods that may need to be used to simulate how the lives of flies would survive or even thrive under certain conditions. Prior to this, 
 
