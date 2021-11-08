@@ -12,4 +12,16 @@ epsilon_beta_gamma = 0.0016
 delta = 1.14226
 lower_alpha = 0.003 * 10**-6
 
-def flies
+# Creation of a rate to be used in the exponential
+def rate_of_mortality():
+    return nothing
+
+# will recursively return the number of flies
+def number_of_flies():
+    return nothing
+
+def graph_data():
+    return nothing
+
+def main():
+    graph_data()
