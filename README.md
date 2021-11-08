@@ -11,7 +11,7 @@ The main factors I could start off is with creating a rate of mortality through 
 
 N_t = N_t-1 + (r * (K-N_t-1) * (N_t-1)/K)
         
-In addition to various functions/methods that may need to be used to simulate how the lives of flies would survive or even thrive under certain conditions. Prior to this, 
+In addition to various functions/methods that may need to be used to simulate how the lives of flies would survive or even thrive under certain conditions. Prior to this, a simple solution to the exponential is needed.
 
 Design:
 UPDATE - Differential Equations do not need to be known since I was reading a more advanced fly study on a virus passed between flies. Insane stuff I'd be interested in the future, not as of right now.

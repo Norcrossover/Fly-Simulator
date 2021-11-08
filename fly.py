@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import numpy as np
 # constants 
 flies = 100
 tspan = 10
@@ -10,3 +12,4 @@ epsilon_beta_gamma = 0.0016
 delta = 1.14226
 lower_alpha = 0.003 * 10**-6
 
+def flies
