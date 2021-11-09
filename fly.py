@@ -9,7 +9,9 @@ y = []
 
 # Creation of a rate to be used in the exponential
 def rate_of_mortality():
-    return 120
+    human_interaction = rand.randint(0, rand.randint(5, 10))
+    flies_health = rand.randint(0, rand.randint(5, 25))
+    return (human_interaction + flies_health)
 
 # defines a carrying capacity, or an amount of food 
 def carrying_capacity():
@@ -17,13 +19,6 @@ def carrying_capacity():
 
 # will recursively return the number of flies
 def number_of_flies():
-    ''' Recursive Solution, can't figure it out
-    if (months == 0): 
-        return initial_flies
-    #x.append(rate_of_mortality * flies)
-    return (rate_of_mortality * number_of_flies(months-1))    
-    #return number_of_flies() + (rate_of_mortality * (K - number_of_flies()) / K)
-    '''
     flies = initial_flies
     x.append(initial_flies)
     for i in range(months):
@@ -41,7 +36,6 @@ def graph_data():
     plt.title("Fly Simulation Test")
     plt.xlabel("Time")
     plt.ylabel("Number of Flies")
-    #plt.plot(x_np, y_np)
     plt.plot(y, x)
     plt.show()
 
