@@ -2,7 +2,7 @@
 This app will simulate a model of flies with various variables that will influence the number of flies living. 
 
 The equation used in this simulation is derived from: https://mathbench.umd.edu/modules/popn-dynamics_housefly/page11.htm
-# NUMBER OF FLIES EQUATION
+>> NUMBER OF FLIES EQUATION
 let r be the rate of mortality
 let K be the carrying capacity
 Let N be the number of flies

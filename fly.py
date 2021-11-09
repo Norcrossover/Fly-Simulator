@@ -1,16 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import random as rand
 # constants/globals 
-flies = 100
-tspan = 10
-mew_one = 0.16
-mew_two = 0.21
-mew_three = 0.08
-mew_four = 0.16
-capital_alpha= 10**-6
-epsilon_beta_gamma = 0.0016
-delta = 1.14226
-lower_alpha = 0.003 * 10**-6
+# flies = 100
+# tspan = 10
+# mew_one = 0.16
+# mew_two = 0.21
+# mew_three = 0.08
+# mew_four = 0.16
+# capital_alpha= 10**-6
+# epsilon_beta_gamma = 0.0016
+# delta = 1.14226
+# lower_alpha = 0.003 * 10**-6
 months = 12
 initial_flies = 3
 x = []
@@ -20,8 +21,12 @@ y = []
 def rate_of_mortality():
     return 120
 
+# defines a carrying capacity, or an amount of food 
+def carrying_capacity():
+    return (rand.randint(1, 200))
+
 # will recursively return the number of flies
-def number_of_flies(months):
+def number_of_flies():
     ''' Recursive Solution, can't figure it out
     if (months == 0): 
         return initial_flies
@@ -31,29 +36,32 @@ def number_of_flies(months):
     '''
     flies = initial_flies
     x.append(initial_flies)
-    y.append(0)
     for i in range(months):
-        flies = (rate_of_mortality() * flies)
+        K = carrying_capacity()
+        flies = (flies + (rate_of_mortality() * (K - flies) * (flies / K)))
         x.append(flies)
         y.append(i)
+    y.append(months)
 
 
-def graph_data(months):
-    number_of_flies(months)
+def graph_data():
+    number_of_flies()
     print(x)
     print(y)
+    # x.reverse()
     # change them to numpy arrays 
-    x_np = np.array(x)
-    y_np = np.array(y)
+    # x_np = np.array(x)
+    # y_np = np.array(y)
     plt.title("Fly Simulation Test")
     plt.xlabel("Time")
     plt.ylabel("Number of Flies")
-    plt.plot(x_np, y_np)
+    #plt.plot(x_np, y_np)
+    plt.plot(y, x)
     plt.show()
 
 
 def main():
-    graph_data(months)
+    graph_data()
 
 if __name__ == "__main__":
     main()
