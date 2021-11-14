@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import random as rand
+
 # constants/globals 
 months = 12
 initial_flies = 3
@@ -23,6 +24,9 @@ def number_of_flies():
     x.append(initial_flies)
     for i in range(months):
         K = carrying_capacity()
+        if (flies < 1):
+            print("All of the flies have died")
+            break
         flies = (flies + (rate_of_mortality() * (K - flies) * (flies / K)))
         x.append(flies)
         y.append(i)
@@ -38,6 +42,7 @@ def graph_data():
     plt.ylabel("Number of Flies")
     plt.plot(y, x)
     plt.show()
+    plt.ion()
 
 
 def main():
